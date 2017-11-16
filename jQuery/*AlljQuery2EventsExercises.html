@@ -2,121 +2,119 @@
 <html>
 <head>
     <title>jQuery Exercises Events Exercises</title>
-
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="index.css">
-
+<!--     <link rel="stylesheet" type="text/css" href="index.css">
+ -->
     <style>
       h1{
+        text-align: center;
+      }
+      table{
+        text-transform : capitalize;
+      }
+      .wrapper{
+        width: 60%;
         margin: 0 auto;
+
+      }
+
+      td{
+
+        border-bottom: 1px solid gray;
+      }
+
+      th{
+         border-bottom: 1px solid gray;
+
       }
 
       table{
-
-        text-transform : capitalize;
+        width:100%;
       }
     </style>
 
             <!-- EXERCISE 1
         Build a simple app for BCS. It is just a form with a single input field in which the end-user can add the full name of a student as “name surname”. Once submit is pressed, the new name and surname gets added to a list that is displayed below. The list must be a table with two columns: one column for first name and one for surname. -->
-
 </head>
 
-    <body>
+<body>
 
-<h1>Sign up</h1>
+  <h1>Name entry form </h1>
+    <div class='wrapper'>
+             <form id='userForm'>
+                  <input id="siteInputName" type="text" placeholder="Full Name">
+                       <select id='selectedOption'>
+                          <option>Select Course</option>
+                          <option>Node</option>
+                          <option>Java</option>
+                          <option>PHP</option>
+                          <option>C++</option>
+                       </select>
 
-  <div class='wrapper'>
-
-
-
-           <form id='userForm'>
-                <input id="siteInputName" type="text" placeholder="Full Name">
-                     <select>
-                        <option>Node</option>
-                        <option>Java</option>
-                        <option>PHP</option>
-                        <option>C++</option>
-                     </select>
-
-                     <button id="button"> Submit!</button>
-
-              <ul class="justList">
-                    <table id="thetable">
-                       </form> 
-
+                       <button id="button"> Submit!</button>
+            </form>
+                      <table id="thetable">
                         <thead>
-                        <tr><th colspan="2">First Name</th></tr>
-                            <td></td>
-                        <tr><th colspan="2">Last Name</th></tr>
-                            <td></td>
-                      </thead>
-                    </table>
-              </ul>
-          </form>
-  </div>
+<!--                           <tr>
+                            <th>First Name</th><th>Last Name</th>
+                          </tr> -->
+                        </thead>
+                        <tbody>
+                            <tr><td><h3>Node</h3></td></tr>
+                            <tr>
+                              <th>First Name</th><th>Last Name</th>
+                            </tr>
 
+                            <tr>
+                              <td><h3>Java</h3></td>
+                              <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                              </tr>
+                            </tr>
+
+                            <tr><td><h3>PHP</h3></td></tr>
+                            <tr>
+                              <th>First Name</th><th>Last Name</th>
+                            </tr>
+
+                            <tr><td><h3>C++</h3></td></tr>
+                            <tr>
+                              <th>First Name</th><th>Last Name</th>
+                            </tr>
+                          </tbody>
+                        </table>
+    </div>
 </body>
-
     <script>
-
-        $('#button').click(function(student){
-            student.preventDefault() // this stops it from clearing information
-
-            var fullName = $('#siteInputName').val(); 
+        $('#button').click(function(event){
+            event.preventDefault() // this stops it from clearing information
+              var fullName = $('#siteInputName').val(); 
 // Better Understand : '/[ ,]+/'
-            var split = fullName.split(' ');
-             if(fullName){ 
-            var name = split[0];
-            var last = split[1]
-            var capLetter = last.charAt(0);
-            var languageSelected = $('select').filter(':selected').val();
+              var split = fullName.split(' ');
+              // var selectedOption = $(#selectedOption).val();
 
-           
-                  $('<tr />',{html: name}).appendTo("td:first")
-                  $('<tr />',{html: capLetter},).appendTo("td:last")
-                  $('<tr />',{html: languageSelected}).appendTo("td")
+                if(fullName){ 
+                  var name = split[0];
+                  var last = split[1]
+                  var capLetter = last.charAt(0);
+                  var languageSelected = $('select').val();
 
-           } else {
+                          // $("td:contains('languageSelected')" ,{html: name}).appendTo("th:first")
+                          // $("td:contains('languageSelected')" ,{html: capLetter},).appendTo("th:last")
+
+                    // $("td:contains('languageSelected')").appendTo("th:first")
+                    $("td:contains('"+languageSelected+"')").parent().next().after('<tr><th>'+ name + '</th><th>'+ capLetter + '</th></tr>')
+
+                    console.log(languageSelected)
+
+                   } else {
 // Alert not working. 
-              alert('correct format is first name + space + surname');
-           }
-           
-        });
-// Trying to make the table look nicer by making every other row gray, not working . Plus theres this big space between. 
-        $('tr:even').css('background-color' , 'white');
-        $('tr:odd').css('background-color' , 'gray');
-// Text does not align to the center. 
-        $('table').css('text-align', 'center');
-
-        $('select>option:eq(3)').attr('selected', true);
-
- 
+                      alert('correct format is first name + space + surname');
+                   }
+                });
     </script>
-
 </html>
-
-<!-- Alternate Way -->
-<!-- Select Selector
-If match x , and press enter. Add to Row with Input that has been splut.
-
-tr
- td (d is for columns)  -->
-
-                     <!--  <thead>
-                        <tr><th >First Name</th><th>Last Name</th></tr>
-                      </thead>
-
-                      <tbody>
-                          <tr>Node</tr>
-                          <tr>Java</tr>
-                          <tr>Php</tr>
-                          <tr>C++</tr>
-                      </tbody>
-
-                    </table> -->
-
-
