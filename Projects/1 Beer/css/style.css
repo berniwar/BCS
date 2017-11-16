@@ -1,0 +1,57 @@
+
+.header{
+    background: url('../img/4551978-beer-wallpaper.jpg');
+    height: 500px;
+    width: 100%; }
+
+.flex-container {
+	list-style: none;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+}
+.flex-item {
+	text-align: left;
+	width: 25%;
+}
+
+img {
+	width: 100%;}
+
+.list{
+		display:flex;
+		justify-content: flex-end;
+		background: black;
+		color:white;
+		position:fixed; }
+
+h1{
+	text-align: center;
+	font-family:'bookman';}
+
+footer {
+	background-color: black;
+	height:40px;
+	color: white;
+	text-align: center;
+	padding:1%;}
+
+/*
+footer a{
+	padding:1%;
+	height:100px;}
+a
+	{color:inherit;}
+*/
+
+.link{
+    text-align: center
+}
+
+
+
+

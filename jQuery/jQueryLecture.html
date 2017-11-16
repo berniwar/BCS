@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery playground</title>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+  	<style>
+  		div{
+  			width:200px;
+  			height:200px;
+  			background:green;
+  		}
+
+  		.superStyle{
+  			background-color:red;
+  			font-size:100px;
+  			color:green;
+  			width:100%;
+  		}
+  	</style>
+</head>
+<body>
+		<div>
+			<p id='kiwi'> I'm a paragraph with id KIWI.</p>
+		</div>
+		<div  class='banana'>
+			<p id='withBananas'> I'm a paragraph inside a BANANA div.</p>
+		</div>
+
+		
+		<script>
+		// $(".banana").css('float', 'right')
+			var getTextfromDom = $('#kiwi').text()
+			alert(getTextfromDom)
+			$('#withBananas').text(getTextfromDom)
+			$(`<h1>Simple Animation Example</h1>`).hide().appendTo('#withBananas').show('slow')
+		</script>
+			
+
+</body>
+</html>

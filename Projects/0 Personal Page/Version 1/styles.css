@@ -1,0 +1,62 @@
+styles.css
+
+<style>
+	/*format:
+	    selector {
+			parameter:value;
+		}*/
+div {
+	margin:10px;
+}
+
+img{
+	border:100px;
+	border-color:yellow;
+	padding: 10px;
+	padding-color:pink;
+	margin: ;
+	/*width: 100%;*/
+}
+.heading {
+	color: black;
+}
+h1{
+	text-align: center;
+}
+#copywrite {
+	color:white;
+}
+footer {
+	background: black;
+	height:50px;
+	margin: 10%;
+	color:white;
+	text-align:center;
+}
+
+.flex-container{
+
+list-style: none;
+display:-webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex	
+
+-webkit-flex-flow:row wrap;
+justify-content:space-around;
+
+padding: 0;
+margin: 0:
+;
+
+
+}
+
+.flex-item{
+	text-align: left;
+	width: 33%;
+
+}
+	</style>}
+}

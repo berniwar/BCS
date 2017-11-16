@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Exercise 5</title>
+	<!-- 	Instruction : Write a function called `findbyAttr` to find all the `div` elements with an attribute `name` that ends with 'tutorial' and set the background color to yellow. -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+  	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  	crossorigin="anonymous"></script>
+</head>
+	<body id="exerciseTest">
+	        <div id="tutorial-php">
+	                <p>PHP</p>
+	        </div>
+	        <div id="JAVAtutorial">
+	                <p>Java</p>
+	        </div>
+	        <div id="python-tutorial">
+	                <p>Python</p>
+	        </div>
+	        <button id="button1">Click to see the effect</button>
+
+	        <script>
+
+	        	function findAttr(){
+	        		$("div[id$='tutorial']").css('background', 'yellow')
+	        	}
+	      
+	        	findAttr()
+
+	        </script>
+	</body>
+</html>

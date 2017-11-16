@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Exercice 2</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+  	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  	crossorigin="anonymous"></script>
+	<!-- EXERCISE 2 -->
+	<!-- Instructions : Write a function called addDiv that when called adds the following element: <div>This was added with jQuery</div> 
+	//Before all paragraphs (p tags) of the html snippet shown below:
+		<div id = "exerciseTest">
+		        <p>HTML DOM Tutorial</p>
+		        <b>adding DOM elements</b>
+		        <button id="button1">Click to see the effect</button> 
+		</div>
+	-->
+</head>
+
+<body>
+		<div id = "exerciseTest">
+		        <p>HTML DOM Tutorial</p>
+		        <b>adding DOM elements</b>
+		        <button id="button1">Click to see the effect</button> 
+		</div>
+
+		<script>
+			    // $('<div>This was added with jQuery</div>').insertBefore('#exerciseTest')
+
+			    function addDiv(){
+					$('<div>This was added with jQuery</div>').insertBefore('p')
+			    }
+
+			    addDiv()
+
+		</script>
+
+	</body>
+</html>

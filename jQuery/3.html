@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Exercice 3</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+  	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  	crossorigin="anonymous"></script>
+	<!-- 	Instruction : Write a function called `findLi` to find all `<li>` elements that don't have the attribute `name` with value 'color' and add `<span> with no color </span>`after the element -->
+
+</head>
+
+	<body>
+
+		 <div id = "exerciseTest">
+		            <ul>
+		                    <li name="color" value="Red">Sun</li>
+		                    <span>Sea</span>
+		                    
+		                    <li value="Cold Fusion">Sand</li>
+		                    
+		                    <li name="accept" value="Evil Plans">Hill</li>
+
+		                   <span> Dale</span>
+		            </ul>
+		            <button id="button1">Click to see the effect</button>
+		    </div>
+
+		<script>
+
+			function findLi(){
+			$("li[name!='color']").append("<span> with no color</span>")
+			}
+				
+
+			findLi()
+
+		</script>
+
+	</body>
+
+</html>
+
+<!-- // Working on 1 : Gives me all with no name
+		 //  function findLi(){
+		 //    if($( 'li' ).not( ".name" )){
+		 //    	$(`<span> with no color </span>`).appendTo('li');
+			// 	}
+			// }
+			// findLi()
+// Working on 2 : "This" does not solve it. 
+		 //  function findLi(){
+		 //    if($( 'li' ).not( ".name" )){
+		 //    	$(`<span> with no color </span>`).appendTo(this);
+			// 	}
+			// }
+			// findLi()
+// Working on 3 : Gives me all with no name
+		// function findLi(){
+		// 	If($('li[class^="name"]'){
+		// 		$(`<span> with no color </span>`).appendTo('li');
+		// 	}
+		// }
+		// findLi()
+
+	// Working on. Should not work 
+		    // if (!$('#exerciseTest').hasClass(".name")) {
+	// How do i make it specific to the Li that it was missing from?
+			// $(`<span> with no color </span>`).appendTo('li');
+			// 	}

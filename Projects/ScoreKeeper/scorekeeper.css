@@ -1,0 +1,15 @@
+.winner{
+	color:green;
+}
+
+.selected{
+	color:red;
+}
+
+.notSelected{
+ 	color:black;
+};
+
+h1 {
+	margin :0% auto;
+}

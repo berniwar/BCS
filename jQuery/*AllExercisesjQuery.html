@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Exercices</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+  	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  	crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+EXERCISE 1
+
+    //create an html file with a div with a class  main then append to it an h1 
+    //with the text hello.
+    
+    <div class='main'> </div>
+
+    $(`<h1>Hello</h1>`).append('div');
+
+    $('div').append(`<h1>Hello</h1>`);
+
+EXERCISE 2
+
+    Write a function called addDiv that when called adds the following element 
+    
+    <div>This was added with jQuery</div> 
+    before all paragraphs (p tags) of the 
+    html snippet shown below:
+    <div id = "exerciseTest">
+            <p>HTML DOM Tutorial</p>
+            <b>adding DOM elements</b>
+            <button id="button1">Click to see the effect</button> 
+    </div>
+    
+    The object here is similar to an Array of DOM Elements.
+
+EXERCISE 3
+Write a function called `findLi` to find all `<li>` elements that don't have the attribute `name` with value 'color' and add `<span> with no color </span>`after the element
+Snippet
+
+    <div id = "exerciseTest">
+            <ul>
+                    <li name="color" value="Red">Sun</li>
+                    <span>Sea</span>
+                    <li value="Cold Fusion">Sand</li>
+                    <li name="accept" value="Evil Plans">Hill</li>
+                    <span> Dale</span>
+            </ul>
+            <button id="button1">Click to see the effect</button>
+    </div>
+
+EXERCISE 4
+Define a function `FindRed` that finds all inputs with a value of "Red" and change the text of the next sibling to `the value is red!`
+snippet
+
+    <div>
+            <div>
+                    <label>
+                            <input type="radio" name="color" value="Red">
+                            <span>value?</span>
+                            <div></div>
+                    </label>
+            </div>
+            <div>
+                    <label>
+                            <input type="radio" name="color" value="Green">
+                            <span>value?</span>
+                            <div></div>
+                    </label>
+            </div>
+            <div>
+                    <label>
+                            <div type="radio" name="color" value="Red">
+                                    <span>value?</span>
+                                    <div></div>
+                            </label>
+                    </div>
+                    <button id="button1">Click to see the effect</button>
+            </div>
+
+EXERCISE 5
+Write a function called `findbyAttr` to find all the `div` elements with an attribute `name` that ends with 'tutorial' and set the background color to yellow.
+Snippet
+
+    <body id="exerciseTest">
+            <div id="tutorial-php">
+                    <p>PHP</p>
+            </div>
+            <div id="JAVAtutorial">
+                    <p>Java</p>
+            </div>
+            <div id="python-tutorial">
+                    <p>Python</p>
+            </div>
+            <button id="button1">Click to see the effect</button>
+    </body>
+
+EXERCISE 6
+Write a function called `findDirect` that finds all labels that are direct descendants of a `form` and mark them with a dotted red border: `1px dotted red`.
+Snippet
+
+    <div id ="exerciseTest">
+            <form>
+                    <label for="name">Child of form:</label>
+                    <input name="name" id="name">
+                    <fieldset>
+                            <label for="newsletter">Grandchild of form, child of fieldset:</label>
+                            <input name="newsletter" id="newsletter">
+                    </fieldset>
+            </form>
+            Sibling to form: <input name="none">
+    </div>
+
+
+
+</body>
+</html>
+
