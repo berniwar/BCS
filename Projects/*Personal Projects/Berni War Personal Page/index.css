@@ -1,4 +1,8 @@
 
+body{
+  font-family: 'Lato', sans-serif;
+}
+
 .img-responsive{
 		width: 100%;
 		max-height:100%;

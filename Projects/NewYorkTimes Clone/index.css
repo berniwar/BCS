@@ -4,7 +4,7 @@ body{
 }
 
 .header-container {
-	width:80%;
+	width:60%;
 	margin:auto;
 	border-bottom: 1px solid gray;
     grid-column: 1 / span 3;
@@ -36,17 +36,17 @@ ul li {
 
 h1{
 	text-align: center;
-	margin:auto;
+
 }
 
 * {box-sizing: border-box;}
 .wrapper {
-  max-width: 940px;
+  max-width: 80%;
   margin: 0 auto;
 }
 * {box-sizing: border-box;}
 .wrapper {
-  max-width: 940px;
+  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -74,8 +74,9 @@ h1{
   grid-row: 3 / 6;
 }
 .three {
+  padding:0;
   grid-column: 1;
-  grid-row: 3 / 7;
+  grid-row: 3 / 3;
 }
 .four {
   grid-column: 3;
@@ -105,7 +106,3 @@ img {
 	border-radius: 3px;
 	}
 
-.image-container {
-		overflow: hidden;
-		margin-bottom: 7px;
-	}

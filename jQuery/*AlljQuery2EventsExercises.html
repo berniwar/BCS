@@ -6,23 +6,35 @@
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <!--     <link rel="stylesheet" type="text/css" href="index.css">
  -->
     <style>
+
+      body{
+        font-family: 'Lato', sans-serif;
+      }
+
       h1{
         text-align: center;
       }
+
+      #userForm {
+        margin:0 auto;
+        text-align: center;
+      }
+
       table{
         text-transform : capitalize;
+        border-spacing: 0;
       }
+
       .wrapper{
         width: 60%;
         margin: 0 auto;
-
       }
 
       td{
-
         border-bottom: 1px solid gray;
       }
 
@@ -30,19 +42,17 @@
          border-bottom: 1px solid gray;
 
       }
-
       table{
         width:100%;
       }
     </style>
 
-            <!-- EXERCISE 1
-        Build a simple app for BCS. It is just a form with a single input field in which the end-user can add the full name of a student as “name surname”. Once submit is pressed, the new name and surname gets added to a list that is displayed below. The list must be a table with two columns: one column for first name and one for surname. -->
+<!-- EXERCISES 1 - 5-->
 </head>
 
 <body>
 
-  <h1>Name entry form </h1>
+  <h1>class entry form</h1>
     <div class='wrapper'>
              <form id='userForm'>
                   <input id="siteInputName" type="text" placeholder="Full Name">
@@ -54,41 +64,60 @@
                           <option>C++</option>
                        </select>
 
-                       <button id="button"> Submit!</button>
+                       <button id="button"> <h5>Submit</h5></button>
             </form>
                       <table id="thetable">
+
                         <thead>
-<!--                           <tr>
-                            <th>First Name</th><th>Last Name</th>
-                          </tr> -->
                         </thead>
+
                         <tbody>
-                            <tr><td><h3>Node</h3></td></tr>
                             <tr>
-                              <th>First Name</th><th>Last Name</th>
+                              <td><h2>Node</h2></td>
+                              <td></td>
                             </tr>
 
                             <tr>
-                              <td><h3>Java</h3></td>
+                              <th><h5>First Name</h5></th>
+                              <th><h5>Last Name</h5></th>
+                            </tr>
+
+                            <tr>
+                              <td><h2>Java</h2></td>
+                              <td></td>
+                            </tr>
+
+                            <tr>
                               <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th><h5>First Name</h5></th>
+                                <th><h5>Last Name</h5></th>
                               </tr>
                             </tr>
 
-                            <tr><td><h3>PHP</h3></td></tr>
-                            <tr>
-                              <th>First Name</th><th>Last Name</th>
+                            <tr><td><h2>PHP</h2></td>
+                              <td></td>
                             </tr>
 
-                            <tr><td><h3>C++</h3></td></tr>
                             <tr>
-                              <th>First Name</th><th>Last Name</th>
+                              <th><h5>First Name</h5></th>
+                              <th><h5>Last Name</h5></th>
                             </tr>
+
+                            <tr><td><h2>C++</h2></td>
+                              <td></td>
+                            </tr>
+
+                            <tr>
+                              <th><h5>First Name</h5></th>
+                              <th><h5>Last Name</h5></th>
+                            </tr>
+
                           </tbody>
                         </table>
     </div>
+
 </body>
+
     <script>
         $('#button').click(function(event){
             event.preventDefault() // this stops it from clearing information
@@ -103,18 +132,13 @@
                   var capLetter = last.charAt(0);
                   var languageSelected = $('select').val();
 
-                          // $("td:contains('languageSelected')" ,{html: name}).appendTo("th:first")
-                          // $("td:contains('languageSelected')" ,{html: capLetter},).appendTo("th:last")
-
-                    // $("td:contains('languageSelected')").appendTo("th:first")
                     $("td:contains('"+languageSelected+"')").parent().next().after('<tr><th>'+ name + '</th><th>'+ capLetter + '</th></tr>')
 
-                    console.log(languageSelected)
-
                    } else {
-// Alert not working. 
+ 
                       alert('correct format is first name + space + surname');
                    }
+
                 });
     </script>
 </html>
